@@ -1,0 +1,36 @@
+// Fonty
+$font-primary: "Poppins", sans-serif;
+$font-secondary: "Rubik Vinyl", sans-serif;
+
+// Rozmiary czcionek
+$font-h1: clamp(33px, 3.4vw, 3.5rem);
+$font-h2: clamp(33px, 3.4vw, 3.5rem);
+$font-h3: clamp(16px, 2vw, 1.8rem);
+$font-h4: clamp(18px, 2.2vw, 1.7rem);
+$font-p: 18px;
+$font-number: 45px;
+$font-small: 18px;
+
+// Wagi czcionek
+$weight-bold: 700;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semi-bold: 600;
+$weight-extra-light: 200;
+
+// Line-height
+$line-h1: 110%;
+
+// Colors
+$background-color: #0f0f0f;
+$stroke-color: #353535;
+$box-gradient-color: linear-gradient(
+	120deg,
+	#212121 0%,
+	rgba(33, 33, 33, 0.2) 70%
+);
+$accent-color: #6d8bff;
+$white-color: #ffffff;
+$skill-background: #292929;
+$numbers-color: #d4d4d4;
+$text-color: #bcbcbc;
