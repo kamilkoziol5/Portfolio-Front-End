@@ -523,11 +523,12 @@ html .box {
 				border: 1px solid $stroke-color;
 				height: 70px;
 				border-radius: 14px;
-				padding: 10px;
+				padding: 15px;
 				color: $white-color;
 				font-size: 20px;
 				transition: all 0.3s ease;
 
+				&:focus,
 				&:hover {
 					background-color: #181818;
 					border: 1px solid $accent-color;
@@ -543,9 +544,10 @@ html .box {
 				border: 1px solid $stroke-color;
 				height: 120px;
 				border-radius: 14px;
-				padding: 10px;
+				padding: 15px;
 				color: $white-color;
 
+				&:focus,
 				&:hover {
 					background-color: #181818;
 					border: 1px solid $accent-color;
@@ -596,6 +598,46 @@ html .box {
 			&:hover {
 				transform: translateX(-5px) scale(1.05);
 				box-shadow: 0 0 10px #375fff, 0 0 20px #6d8bff, 0 0 40px #93a8ff;
+			}
+		}
+	}
+
+	// Footer //
+	.footer span {
+		color: $white-color;
+		font-size: 18px;
+
+		.accent {
+			display: inline;
+			color: $accent-color;
+			position: relative;
+			font-weight: 800;
+			cursor: pointer;
+
+			&:before {
+				content: "Frontend Developer";
+				color: $white-color;
+				padding: 10px;
+				border-radius: 4px;
+				font-size: 12px;
+				line-height: 25px;
+				font-weight: 300;
+				background-color: $background-color;
+				border: 1px solid $stroke-color;
+				position: absolute;
+				top: -60px;
+				width: 150px;
+				height: 100%;
+				opacity: 0;
+				visibility: hidden;
+				transform: scale(0) translateX(-50%);
+				transition: all 0.3s ease;
+			}
+
+			&:hover::before {
+				opacity: 1;
+				visibility: visible;
+				transform: scale(1) translateX(0);
 			}
 		}
 	}

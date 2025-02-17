@@ -492,12 +492,12 @@ html .box {
   border: 1px solid #353535;
   height: 70px;
   border-radius: 14px;
-  padding: 10px;
+  padding: 15px;
   color: #ffffff;
   font-size: 20px;
   transition: all 0.3s ease;
 }
-.right-side .contact-form form .input-box input:hover {
+.right-side .contact-form form .input-box input:focus, .right-side .contact-form form .input-box input:hover {
   background-color: #181818;
   border: 1px solid #6d8bff;
 }
@@ -511,10 +511,10 @@ html .box {
   border: 1px solid #353535;
   height: 120px;
   border-radius: 14px;
-  padding: 10px;
+  padding: 15px;
   color: #ffffff;
 }
-.right-side .contact-form form .input-box textarea:hover {
+.right-side .contact-form form .input-box textarea:focus, .right-side .contact-form form .input-box textarea:hover {
   background-color: #181818;
   border: 1px solid #6d8bff;
 }
@@ -558,6 +558,41 @@ html .box {
 .right-side .cta .content i:hover {
   transform: translateX(-5px) scale(1.05);
   box-shadow: 0 0 10px #375fff, 0 0 20px #6d8bff, 0 0 40px #93a8ff;
+}
+.right-side .footer span {
+  color: #ffffff;
+  font-size: 18px;
+}
+.right-side .footer span .accent {
+  display: inline;
+  color: #6d8bff;
+  position: relative;
+  font-weight: 800;
+  cursor: pointer;
+}
+.right-side .footer span .accent:before {
+  content: "Frontend Developer";
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 25px;
+  font-weight: 300;
+  background-color: #0f0f0f;
+  border: 1px solid #353535;
+  position: absolute;
+  top: -60px;
+  width: 150px;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0) translateX(-50%);
+  transition: all 0.3s ease;
+}
+.right-side .footer span .accent:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateX(0);
 }
 
 @media (max-width: 1400px) {
