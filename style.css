@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h1 {
   font-family: "Poppins", sans-serif;
   font-size: clamp(33px, 3.4vw, 3.5rem);
@@ -38,6 +39,7 @@ p {
   font-size: 45px;
   font-weight: 600;
   color: #ffffff;
+  line-height: 55px;
 }
 
 .small-text {
@@ -206,7 +208,10 @@ html .box {
   display: flex;
   gap: 15px;
 }
-.socials .slink {
+.socials a {
+  /* 🔥 Teraz kolory działają tylko na hover */
+}
+.socials a .slink {
   display: flex;
   align-items: center;
   justify-content: left;
@@ -219,10 +224,7 @@ html .box {
   transition: width 0.3s ease-in-out;
   border: 1px solid #444;
 }
-.socials .slink:hover {
-  width: 220px;
-}
-.socials .icon {
+.socials a .slink .icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -230,11 +232,11 @@ html .box {
   height: 70px;
   border-radius: 70px;
 }
-.socials .icon i {
+.socials a .slink .icon i {
   font-size: 25px;
   color: #ffffff;
 }
-.socials span {
+.socials a .slink span {
   font-size: 20px;
   font-weight: 500;
   color: #ffffff;
@@ -242,39 +244,34 @@ html .box {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.socials .slink:hover span {
+.socials a .slink:hover {
+  width: 220px;
+}
+.socials a .slink:hover span {
   opacity: 1;
 }
-
-.socials a:nth-child(1):hover .icon {
+.socials a:nth-child(1) .slink:hover .icon {
   background-color: #4e4e4e;
 }
-
-.socials a:nth-child(2):hover .icon {
+.socials a:nth-child(2) .slink:hover .icon {
   background-color: #ea4c89;
 }
-
-.socials a:nth-child(3):hover .icon {
+.socials a:nth-child(3) .slink:hover .icon {
   background-color: #1769ff;
 }
-
-.socials a:nth-child(4):hover .icon {
+.socials a:nth-child(4) .slink:hover .icon {
   background-color: #d44638;
 }
-
-.socials a:nth-child(1):hover span {
+.socials a:nth-child(1) .slink:hover span {
   color: #c9c9c9;
 }
-
-.socials a:nth-child(2):hover span {
+.socials a:nth-child(2) .slink:hover span {
   color: #ea4c89;
 }
-
-.socials a:nth-child(3):hover span {
+.socials a:nth-child(3) .slink:hover span {
   color: #1769ff;
 }
-
-.socials a:nth-child(4):hover span {
+.socials a:nth-child(4) .slink:hover span {
   color: #d44638;
 }
 
@@ -540,27 +537,49 @@ html .box {
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(180, 180, 180, 0.2);
 }
+.right-side .cta .content {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+.right-side .cta .content .numbers span {
+  color: #6d8bff;
+}
+.right-side .cta .content i {
+  font-size: 25px;
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  margin-left: 0px;
+}
+.right-side .cta .content i:hover {
+  transform: translateX(-5px) scale(1.05);
+  box-shadow: 0 0 10px #375fff, 0 0 20px #6d8bff, 0 0 40px #93a8ff;
+}
 
 @media (max-width: 1400px) {
   p {
     font-size: 16px;
   }
-  .socials .slink {
+  .socials a .slink {
     width: 50px;
     height: 50px;
   }
-  .socials .slink:hover {
+  .socials a .slink:hover {
     width: 160px;
   }
-  .socials .icon {
+  .socials a .slink .icon {
     min-width: 50px;
     height: 50px;
   }
-  .socials .icon i {
+  .socials a .slink .icon i {
     font-size: 20px;
     color: #ffffff;
   }
-  .socials span {
+  .socials a .slink span {
     font-size: 16px;
   }
 }
@@ -624,5 +643,9 @@ html .box {
   }
   .right-side .contact-form form .input-row {
     flex-direction: column;
+  }
+  .numbers {
+    font-size: 32px;
+    line-height: 35px;
   }
 }/*# sourceMappingURL=style.css.map */

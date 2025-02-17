@@ -182,78 +182,86 @@ html .box {
 	display: flex;
 	gap: 15px;
 
-	.slink {
-		display: flex;
-		align-items: center;
-		justify-content: left;
-		width: 70px;
-		height: 70px;
-		background-color: #141414;
-		border-radius: 70px;
-		overflow: hidden;
-		cursor: pointer;
-		transition: width 0.3s ease-in-out;
-		border: 1px solid #444;
-	}
+	a {
+		.slink {
+			display: flex;
+			align-items: center;
+			justify-content: left;
+			width: 70px;
+			height: 70px;
+			background-color: #141414;
+			border-radius: 70px;
+			overflow: hidden;
+			cursor: pointer;
+			transition: width 0.3s ease-in-out;
+			border: 1px solid #444;
 
-	.slink:hover {
-		width: 220px;
-	}
+			.icon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-width: 70px;
+				height: 70px;
+				border-radius: 70px;
 
-	.icon {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		min-width: 70px;
-		height: 70px;
-		border-radius: 70px;
+				i {
+					font-size: 25px;
+					color: $white-color;
+				}
+			}
 
-		i {
-			font-size: 25px;
-			color: $white-color;
+			span {
+				font-size: 20px;
+				font-weight: 500;
+				color: $white-color;
+				margin-left: 10px;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+
+			&:hover {
+				width: 220px;
+
+				span {
+					opacity: 1;
+				}
+			}
+		}
+
+		/* 🔥 Teraz kolory działają tylko na hover */
+		&:nth-child(1) .slink:hover .icon {
+			background-color: #4e4e4e;
+		}
+
+		&:nth-child(2) .slink:hover .icon {
+			background-color: #ea4c89;
+		}
+
+		&:nth-child(3) .slink:hover .icon {
+			background-color: #1769ff;
+		}
+
+		&:nth-child(4) .slink:hover .icon {
+			background-color: #d44638;
+		}
+
+		&:nth-child(1) .slink:hover span {
+			color: #c9c9c9;
+		}
+
+		&:nth-child(2) .slink:hover span {
+			color: #ea4c89;
+		}
+
+		&:nth-child(3) .slink:hover span {
+			color: #1769ff;
+		}
+
+		&:nth-child(4) .slink:hover span {
+			color: #d44638;
 		}
 	}
-
-	span {
-		font-size: 20px;
-		font-weight: 500;
-		color: $white-color;
-		margin-left: 10px;
-		opacity: 0;
-		transition: opacity 0.3s ease;
-	}
-
-	.slink:hover span {
-		opacity: 1;
-	}
 }
-
-.socials a:nth-child(1):hover .icon {
-	background-color: #4e4e4e;
-}
-.socials a:nth-child(2):hover .icon {
-	background-color: #ea4c89;
-}
-.socials a:nth-child(3):hover .icon {
-	background-color: #1769ff;
-}
-.socials a:nth-child(4):hover .icon {
-	background-color: #d44638;
-}
-
-.socials a:nth-child(1):hover span {
-	color: #c9c9c9;
-}
-.socials a:nth-child(2):hover span {
-	color: #ea4c89;
-}
-.socials a:nth-child(3):hover span {
-	color: #1769ff;
-}
-.socials a:nth-child(4):hover span {
-	color: #d44638;
-}
-
 // RIGHT SCROLL SIDE STYLES //
 
 .right-side {
@@ -565,6 +573,32 @@ html .box {
 			}
 		}
 	}
+
+	// Call to Action //
+	.cta .content {
+		display: flex;
+		align-items: end;
+		justify-content: space-between;
+
+		.numbers span {
+			color: $accent-color;
+		}
+		i {
+			font-size: 25px;
+			background-color: $white-color;
+			padding: 5px;
+			border-radius: 50px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			border: 1px solid transparent;
+			margin-left: 0px;
+
+			&:hover {
+				transform: translateX(-5px) scale(1.05);
+				box-shadow: 0 0 10px #375fff, 0 0 20px #6d8bff, 0 0 40px #93a8ff;
+			}
+		}
+	}
 }
 
 // ------------------------------------- MEDIA RESPONSIVE -----------------------------------------//
@@ -573,15 +607,13 @@ html .box {
 		font-size: 16px;
 	}
 
-	.socials {
-		.slink {
-			width: 50px;
-			height: 50px;
-		}
-		.slink:hover {
+	.socials a .slink {
+		width: 50px;
+		height: 50px;
+
+		&:hover {
 			width: 160px;
 		}
-
 		.icon {
 			min-width: 50px;
 			height: 50px;
@@ -591,7 +623,6 @@ html .box {
 				color: $white-color;
 			}
 		}
-
 		span {
 			font-size: 16px;
 		}
@@ -668,5 +699,10 @@ html .box {
 
 	.right-side .contact-form form .input-row {
 		flex-direction: column;
+	}
+
+	.numbers {
+		font-size: 32px;
+		line-height: 35px;
 	}
 }
