@@ -118,16 +118,74 @@ html .box {
 }
 .socials-buttons-container .buttons .btn1 {
   position: relative;
-  color: #ffffff;
-  padding: 10px 25px;
-  background: linear-gradient(20deg, #0f0f0f 0%, rgba(33, 33, 33, 0.2) 90%);
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.2em;
+  padding: 12px 30px;
   border: 1px solid #353535;
-  font-size: 18px;
+  background: #131313;
   border-radius: 8px;
-  transition: all 0.5s ease;
+  transition: all 0.1s ease;
 }
 .socials-buttons-container .buttons .btn1:hover {
-  background: linear-gradient(120deg, #000000 0%, rgba(33, 33, 33, 0.2) 90%);
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 25px var(--clr);
+}
+.socials-buttons-container .buttons .btn1::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #131313;
+  border-radius: 6px;
+}
+.socials-buttons-container .buttons .btn1 span {
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+}
+.socials-buttons-container .buttons .btn1:hover span {
+  letter-spacing: 0.2em;
+}
+.socials-buttons-container .buttons .btn1 i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.socials-buttons-container .buttons .btn1 i::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 80%;
+  width: 20px;
+  height: 10px;
+  border: 2px solid var(--clr);
+  background: #131313;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+}
+.socials-buttons-container .buttons .btn1:hover i::before {
+  width: 35px;
+  left: 20%;
+}
+.socials-buttons-container .buttons .btn1 i::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  right: 80%;
+  width: 20px;
+  height: 10px;
+  border: 2px solid var(--clr);
+  background: #131313;
+  transform: translateX(50%);
+  transition: all 0.3s ease;
+}
+.socials-buttons-container .buttons .btn1:hover i::after {
+  width: 35px;
+  right: 20%;
 }
 .socials-buttons-container .buttons .btn2 {
   color: #ffffff;
