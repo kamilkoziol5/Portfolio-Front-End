@@ -707,9 +707,20 @@ html .box {
   p {
     font-size: 14px;
   }
+  .socials-buttons-container .buttons {
+    flex-direction: column;
+  }
   .socials-buttons-container .buttons .btn1 {
     padding: 10px 15px;
     font-size: 16px;
+  }
+  .socials-buttons-container .buttons .btn1 i::before {
+    width: 15px;
+    height: 7px;
+  }
+  .socials-buttons-container .buttons .btn1 i::after {
+    width: 15px;
+    height: 7px;
   }
   .socials-buttons-container .buttons .btn2 {
     font-size: 16px;

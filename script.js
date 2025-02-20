@@ -30,24 +30,23 @@ document.addEventListener("DOMContentLoaded", function () {
 	gsap.from(".about, .skills", {
 		opacity: 0,
 		y: "-300px",
-		scale: 1.3,
+		scale: 0,
 		duration: 1,
 		ease: "power3.out",
 		delay: 3,
 		stagger: 0.4,
 	})
 
-	gsap.utils
-		.toArray(".services, .counters, .portfolio, .contact-form, .cta")
+	document
+		.querySelectorAll(".services, .counters, .portfolio, .contact-form")
 		.forEach(section => {
 			gsap.from(section, {
 				scrollTrigger: {
 					trigger: section,
-					start: "top 80%",
+					start: "top 120%",
 				},
 				opacity: 0,
-				scale: 1.3,
-				y: 50,
+				scale: 0,
 				duration: 1,
 				ease: "power3.out",
 			})
@@ -61,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		opacity: 0,
 		y: 50,
 		duration: 1,
-		delay: 1,
 		ease: "power3.out",
 	})
 })
